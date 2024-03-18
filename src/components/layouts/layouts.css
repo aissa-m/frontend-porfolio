@@ -1,0 +1,45 @@
+/* src/pages/Inicio.css */
+
+.layout-container {
+    position: relative;
+    height: 100vh; /* Altura completa */
+    background-image: url('../../img/fondo3.jpg'); /* Añade tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+.top-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.top-menu a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    /* Añade más estilos según tu diseño */
+}
+
+.social-links {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    /* Añade más estilos según tu diseño */
+}
+
+.brand-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
