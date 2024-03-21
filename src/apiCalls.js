@@ -1,19 +1,20 @@
 import axios from 'axios';
 
 // Define la base URL de tu API
-const BASE_URL = 'http://localhost:8000/api'; // Cambia esto por la URL real de tu API
+const BASE_URL = 'http://localhost:8000/api';
+const BASE_URL_DO = 'https://my-portfolio-mirnv.ondigitalocean.app/api';
 
 // Autenticación
 export const register = async (userData) => {
-    return await axios.post(`${BASE_URL}/register`, userData);
+    return await axios.post(`${BASE_URL_DO}/register`, userData);
 };
 
 export const login = async (credentials) => {
-    return await axios.post(`${BASE_URL}/login`, credentials);
+    return await axios.post(`${BASE_URL_DO}/login`, credentials);
 };
 
 export const logout = async (token) => {
-    return await axios.post(`${BASE_URL}/logout`, {}, {
+    return await axios.post(`${BASE_URL_DO}/logout`, {}, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -22,15 +23,15 @@ export const logout = async (token) => {
 
 // Proyectos
 export const fetchProjects = async () => {
-    return await axios.get(`${BASE_URL}/proyectos`);
+    return await axios.get(`${BASE_URL_DO}/proyectos`);
 };
 
 export const fetchProjectById = async (id) => {
-    return await axios.get(`${BASE_URL}/proyectos/${id}`);
+    return await axios.get(`${BASE_URL_DO}/proyectos/${id}`);
 };
 
 export const createProject = async (projectData, token) => {
-    return await axios.post(`${BASE_URL}/proyectos`, projectData, {
+    return await axios.post(`${BASE_URL_DO}/proyectos`, projectData, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -39,15 +40,15 @@ export const createProject = async (projectData, token) => {
 
 // Experiencias
 export const fetchExperiences = async () => {
-    return await axios.get(`${BASE_URL}/experiencias`);
+    return await axios.get(`${BASE_URL_DO}/experiencias`);
 };
 
 export const fetchEducaciones = async () => {
-    return await axios.get(`${BASE_URL}/educaciones`);
+    return await axios.get(`${BASE_URL_DO}/educaciones`);
 };
 
 export const fetchContact = async (email, message) => {
-    return await axios.post(`${BASE_URL}/contact`, {
+    return await axios.post(`${BASE_URL_DO}/contact`, {
         email,
         message
     }, {
@@ -60,7 +61,3 @@ export const fetchContact = async (email, message) => {
 
 
 
-
-// Agrega más funciones según necesites para otras rutas
-
-// Nota: Para las funciones que necesitan autenticación, asegúrate de pasar el token de autenticación

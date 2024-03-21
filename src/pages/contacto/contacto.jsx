@@ -19,7 +19,7 @@ const ContactForm = () => {
             setFormSubmitted(true); // Ocultar el formulario y mostrar el mensaje de éxito
         } catch (error) {
             console.error('Error enviando mensaje:', error.response);
-            setErrorMessage('Error enviando mensaje'); // Establece tu mensaje de error
+            setErrorMessage('Error enviando mensaje, inténtelo más tarde'); // Establece tu mensaje de error
         }
     };
 
