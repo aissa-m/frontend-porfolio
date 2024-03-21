@@ -8,6 +8,36 @@
     background-position: center;
 }
 
+.dark-mode {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mode-toggle {
+    position: fixed; /* Cambio de 'absolute' a 'fixed' para asegurar que los íconos se mantengan en la esquina a través de todo el sitio */
+    bottom: 10px; /* Cambio de 'top' a 'bottom' */
+    right: 10px;
+    width: 40px; /* Tamaño del ícono */
+    z-index: 1000; /* Asegura que los íconos permanezcan por encima de otros elementos */
+}
+
+.mode-toggle img {
+    cursor: pointer;
+    width: 100%; 
+}
+.layout-container.dark-mode::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Asegúrate de que este valor sea menor que el de los elementos de contenido para que no los cubra. */
+    color: wheat;
+}
+
+
+
 .top-menu {
     position: absolute;
     top: 0;

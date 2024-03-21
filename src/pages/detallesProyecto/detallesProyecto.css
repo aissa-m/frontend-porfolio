@@ -1,0 +1,9 @@
+/* .card{
+    background-color: rgba(0, 0, 0, 0.2)!important;
+} */
+
+.card img{
+    padding: 15px;
+    width: 50%;
+    height: 50%;
+}

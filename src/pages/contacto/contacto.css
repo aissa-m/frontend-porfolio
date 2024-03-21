@@ -1,0 +1,49 @@
+/* ContactForm.css */
+.contact-form {
+    width: 100%;
+    max-width: 500px; /* O el ancho que prefieras */
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo transparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.success-message {
+    animation: moveInLeft 1s ease-out;
+    width: 100%;
+    max-width: 500px; /* O el ancho que prefieras */
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo transparente */
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Animación de "deslizamiento desde la izquierda" */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%); /* Comienza fuera de la pantalla a la derecha */
+    }
+    100% {
+        transform: translateX(-100%); /* Termina fuera de la pantalla a la izquierda */
+    }
+}
+.success-message-text {
+    display: inline-block; /* Mantiene el elemento en línea, pero permite transformaciones */
+    white-space: nowrap; /* Evita que el texto se envuelva en nuevas líneas */
+    padding-left: 50%; /* Empieza fuera del contenedor */
+    animation: slideIn 10s linear infinite; /* Ajusta la duración según tus necesidades */
+}
+
+
+.error-message {
+    color: red; /* Personaliza esto como quieras */
+}

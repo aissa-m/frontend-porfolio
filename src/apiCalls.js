@@ -1,5 +1,4 @@
 import axios from 'axios';
-import React from 'react';
 
 // Define la base URL de tu API
 const BASE_URL = 'http://localhost:8000/api'; // Cambia esto por la URL real de tu API
@@ -42,6 +41,25 @@ export const createProject = async (projectData, token) => {
 export const fetchExperiences = async () => {
     return await axios.get(`${BASE_URL}/experiencias`);
 };
+
+export const fetchEducaciones = async () => {
+    return await axios.get(`${BASE_URL}/educaciones`);
+};
+
+export const fetchContact = async (email, message) => {
+    return await axios.post(`${BASE_URL}/contact`, {
+        email,
+        message
+    }, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    });
+};
+
+
+
 
 // Agrega más funciones según necesites para otras rutas
 

@@ -7,34 +7,34 @@
   height: 100vh; /* Hace que el contenedor tenga la altura de la ventana del navegador */
 }
 
-.row {
+.proyectos-container .row {
   width: 80%; /* Opcional, dependiendo de cómo desees que se muestren tus tarjetas */
 }
 
 /* ******************************************* */
-.cards {
+.proyectos-container .cards {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.transparent{
-    background-color: rgba(0, 0, 0, 0.2);
+.proyectos-container .transparent{
+    background-color: rgba(0, 0, 0, 0.2)!important;
 }
 
-.cards .red {
+.proyectos-container .cards .red {
   background-color: #f43f5e;
 }
 
-.cards .blue {
+.proyectos-container .cards .blue {
   background-color: #3b82f6;
 }
 
-.cards .green {
+.proyectos-container .cards .green {
   background-color: #22c55e;
 }
 
-.cards .card {
+.proyectos-container .cards .card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,20 +48,20 @@
   transition: 400ms;
 }
 
-.cards .card p.tip {
+.proyectos-container .cards .card p.tip {
   font-size: 1em;
   font-weight: 700;
 }
 
-.cards .card p.second-text {
+.proyectos-container .cards .card p.second-text {
   font-size: 0.7em;
 }
 
-.cards .card:hover {
-  transform: scale(1.1, 1.1);
+.proyectos-container .cards .card:hover {
+  transform: scale(1.1, 1.1) ;
 }
 
-.cards:hover > .card:not(:hover) {
+.proyectos-container .cards:hover > .card:not(:hover) {
   filter: blur(10px);
   transform: scale(0.9, 0.9);
 }
