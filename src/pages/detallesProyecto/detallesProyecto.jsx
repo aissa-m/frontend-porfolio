@@ -28,7 +28,7 @@ const DetallesProyecto = () => {
                     <p className="card-text">Tecnologías: {proyecto.tecnologias}</p>
                     <p className="card-text">Fecha de inicio: {proyecto.fecha_inicio}</p>
                     <p className="card-text">Fecha de fin: {proyecto.fecha_fin}</p>
-                    {proyecto.enlace && <a href={proyecto.enlace} className="btn btn-secondary" target='_blank'>Ver En GitHub</a>}
+                    {proyecto.enlace && <a href={proyecto.enlace} className="btn btn-secondary" target='_blank' rel="noopener noreferrer">Ver En GitHub</a>}
                 </div>
             </div>
         </div>
