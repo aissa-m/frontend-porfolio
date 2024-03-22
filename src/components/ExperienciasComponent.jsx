@@ -17,6 +17,17 @@ const ExperienciasComponent = () => {
         obtenerExperiencias();
     }, []);
 
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const now = new Date();
+        if (date > now) {
+            return 'Actualidad';
+        } else {
+            // Formatea la fecha como prefieras
+            return date.toLocaleDateString();
+        }
+    };
+
     return (
         <div className="experiencias-container">
             {experiencias.map((exp) => (
@@ -24,7 +35,7 @@ const ExperienciasComponent = () => {
                     <h3>{exp.titulo} en {exp.empresa}</h3>
                     <p>{exp.ubicacion}</p>
                     <p>{exp.descripcion}</p>
-                    <p>Desde {exp.fecha_inicio} hasta {exp.fecha_fin}</p>
+                    <p>{exp.fecha_inicio} - {formatDate(exp.fecha_fin)}</p>
                 </div>
             ))}
         </div>

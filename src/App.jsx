@@ -7,17 +7,18 @@ import Educaciones from './pages/educaciones/educaciones'
 import DetallesProyecto from './pages/detallesProyecto/detallesProyecto';
 import ContactForm from './pages/contacto/contacto';
 import ExperienciaPage from './pages/experiencia/experiencia';
+import Homepage from './pages/home/homePage';
 function App() {
   return (
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Inicio />} exact />
+          <Route path="/" element={<Homepage />} exact />
+          <Route path="/proyectos" element={<Inicio />} exact />
           <Route path="/educacion" element={<Educaciones />} />
           <Route path="/proyectos/:id" element={<DetallesProyecto/>} />
           <Route path="/contacto" element={<ContactForm/>} />
           <Route path="/experiencia" element={<ExperienciaPage/>} />
-          {/* Agrega más rutas según necesites */}
         </Routes>
       </Layout>
     </Router>

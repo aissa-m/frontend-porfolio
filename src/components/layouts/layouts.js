@@ -36,6 +36,7 @@ const Layout = ({ children }) => {
             </div>
             <nav className={`top-menu ${isMenuOpen ? 'open' : ''}`}>
                 <a href="/">Inicio</a>
+                <a href="/proyectos">Proyectos</a>
                 <a href="/educacion">Estudios</a>
                 <a href="/experiencia">Experiencia</a>
                 <a href="/contacto">Contacto</a>

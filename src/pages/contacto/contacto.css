@@ -63,7 +63,7 @@
 /* Estilos que se aplicarán solo en pantallas menores a 768px de ancho */
 @media (max-width: 768px) {
     .contact-form, .success-message, .error-message {
-        width: 90%; /* Hace el formulario más ancho para llenar más espacio */
+        width: 80%; /* Hace el formulario más ancho para llenar más espacio */
         max-width: none; /* Remueve el ancho máximo para permitir que el formulario se expanda */
     }
 

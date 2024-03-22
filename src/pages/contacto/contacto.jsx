@@ -40,7 +40,7 @@ const ContactForm = () => {
             ) : (
                 <div className="success-message text-info">
                     <span className="success-message-text">
-                        ¡Mensaje enviado con éxito!
+                        ¡Gracias por contactar, me pondré en contacto con usted en la mayor brevedad posible!
                     </span>
                 </div>
             )}

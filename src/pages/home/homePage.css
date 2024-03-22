@@ -1,0 +1,74 @@
+.homepage {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff; /* Cambia el color de texto según tus preferencias */
+    padding: 20px;
+}
+
+
+.content-section h1 {
+    color: #FECDC7; /* Un color claro para el título */
+}
+
+.content-section h1 span {
+    color: #FECDC7; /* Cambia esto por tu color preferido */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #aaaaaa; /* Subtítulo de color más suave */
+}
+
+.content-section p {
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.btn-download {
+    padding: 10px 20px;
+    background-color: #4A90E2; /* Usa tu color aquí */
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: darken(#4A90E2, 10%);
+}
+
+.profile-section {
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.profile-image {
+    width: 250px; /* Ajusta según el tamaño que prefieras */
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #A1D4CF; /* Borde del color principal */
+}
+
+@media (max-width: 768px) {
+    .homepage {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-section, .profile-section {
+        width: 100%;
+    }
+
+    .content-section{
+        margin-top: 110px;
+    }
+
+    .profile-section{
+        margin-top: 55px;
+    }
+
+    .profile-image {
+        margin: 0 auto 20px; /* Centra la imagen en pantallas pequeñas */
+    }
+}
