@@ -6,7 +6,7 @@ import Inicio from './pages/inicio/inicio';
 import Educaciones from './pages/educaciones/educaciones'
 import DetallesProyecto from './pages/detallesProyecto/detallesProyecto';
 import ContactForm from './pages/contacto/contacto';
-
+import ExperienciaPage from './pages/experiencia/experiencia';
 function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ function App() {
           <Route path="/educaciones" element={<Educaciones />} />
           <Route path="/proyectos/:id" element={<DetallesProyecto/>} />
           <Route path="/contacto" element={<ContactForm/>} />
+          <Route path="/experiencia" element={<ExperienciaPage/>} />
           {/* Agrega más rutas según necesites */}
         </Routes>
       </Layout>

@@ -1,6 +1,5 @@
-// EducacionComponent.js
 import React, { useEffect, useState } from 'react';
-import { fetchEducaciones } from '../apiCalls'; // Asegúrate de que la ruta de importación sea correcta
+import { fetchEducaciones } from '../apiCalls';
 import './EducacionComponent.css';
 
 const EducacionComponent = () => {
@@ -30,7 +29,6 @@ const EducacionComponent = () => {
                     </div>
                 </div>
             ))}
-
         </div>
     );
 }

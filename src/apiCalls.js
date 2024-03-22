@@ -59,5 +59,9 @@ export const fetchContact = async (email, message) => {
     });
 };
 
+export const fetchExperiencias = async () => {
+    return await axios.get(`${BASE_URL_DO}/experiencias`);
+};
+
 
 

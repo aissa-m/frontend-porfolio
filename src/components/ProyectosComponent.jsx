@@ -1,6 +1,5 @@
-// ProyectosComponent.js
 import React, { useEffect, useState } from "react";
-import { fetchProjects } from "../apiCalls"; // Asegúrate de que la ruta de importación sea correcta
+import { fetchProjects } from "../apiCalls";
 import "./ProyectosComponent.css";
 import { Link } from "react-router-dom";
 const ProyectosComponent = () => {

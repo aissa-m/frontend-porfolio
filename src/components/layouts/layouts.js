@@ -29,15 +29,15 @@ const Layout = ({ children }) => {
             <nav className="top-menu">
                 <a href="/">Inicio</a>
                 <a href="/educaciones">Estudios</a>
+                <a href="/experiencia">Experiencia</a>
                 <a href="/contacto">Contacto</a>
-                {/* Agrega más enlaces según necesites */}
             </nav>
             <div className="social-links">
-                <a href="https://facebook.com"><img src={logoFacebook} alt="Facebook" width={ancho} height={alto}/></a>
-                <a href="https://twitter.com"><img src={logoTwitter} alt="Twitter" /></a>
-                <a href="https://linkedin.com"><img src={logoLink} alt="LinkedIn" /></a>
-                <a href="https://github.com"><img src={logoGit} alt="GitHub" /></a>
-                <a href="https://instagram.com"><img src={logoInsta} alt="Instagram" /></a>
+                {/* <a href="https://facebook.com"><img src={logoFacebook} alt="Facebook" width={ancho} height={alto}/></a> */}
+                <a href="https://twitter.com/aissa_113"><img src={logoTwitter} alt="Twitter" width={ancho} height={alto}/></a>
+                <a href="https://www.linkedin.com/in/issa-maymoutt/"><img src={logoLink} alt="LinkedIn" width={ancho} height={alto}/></a>
+                <a href="https://github.com/aissa-m"><img src={logoGit} alt="GitHub" width={ancho} height={alto}/></a>
+                <a href="https://www.instagram.com/aissa__1313/"><img src={logoInsta} alt="Instagram" width={ancho} height={alto}/></a>
             </div>
             <div className="mode-toggle">
                 <img
@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
                     onClick={toggleDarkMode}
                 />
             </div>
-            {children} {/* Este es el contenido específico de cada página */}
+            {children}
         </div>
     );
 };
