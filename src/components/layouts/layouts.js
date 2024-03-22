@@ -1,7 +1,6 @@
 // Layout.js
 import React, { useState } from 'react';
-import './layouts.css'; // Crear este archivo CSS para estilizar el layout
-import logoFacebook from '../../img/logo-facebook.svg';
+import './layouts.css';
 import logoTwitter from '../../img/logo-twitter.svg';
 import logoInsta from '../../img/logo-instagram.svg';
 import logoGit from '../../img/logo-github.svg';
