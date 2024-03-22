@@ -1,29 +1,25 @@
-/* EducacionComponent.css */
-.card-body h3 {
-    color: #333; /* Cambia el color si es necesario */
-    margin-bottom: 0.5rem;
-}
-
-.card-body p {
-    color: #666; /* Color más suave para el texto */
-    font-size: 1rem;
-}
-
-.card {
-    background-color: #fff; /* Tarjeta con fondo blanco */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border-radius: 8px; /* Bordes redondeados */
-}
-
 .card-text {
-    line-height: 1.6; /* Espaciado de línea para una mejor legibilidad */
+  line-height: 1.6; /* Espaciado de línea para una mejor legibilidad */
 }
 
 .container {
+  min-height: 100vh; /* Establece la altura mínima para que sea toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra las tarjetas verticalmente */
+}
+
+@media (max-width: 768px) {
+  .card-text {
+    line-height: 1; /* Espaciado de línea para una mejor legibilidad */
+  }
+
+  .container {
     min-height: 100vh; /* Establece la altura mínima para que sea toda la pantalla */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra las tarjetas verticalmente */
+    max-width: 80%;
+  }
 }
-
 /*  */

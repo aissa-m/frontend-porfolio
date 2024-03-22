@@ -1,9 +1,35 @@
-/* .card{
-    background-color: rgba(0, 0, 0, 0.2)!important;
-} */
-
 .card img{
     padding: 15px;
     width: 50%;
     height: 50%;
+}
+
+@media (max-width: 768px) {
+    .caja {
+        padding: 10px; /* Añade algo de padding para evitar que la tarjeta toque los bordes */
+    }
+
+    .card {
+        width:100%; /* Reduce el ancho de la tarjeta para que no ocupe toda la pantalla */
+        margin: 40px;
+        margin-top: 90px;
+    }
+
+    .card img {
+        width: 100%; /* Asegúrate de que la imagen ocupe el ancho completo de la tarjeta */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    }
+
+    .card-body {
+        padding: 10px; /* Reduce el padding dentro de la tarjeta */
+    }
+
+    .card-title, .card-text {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente para una mejor lectura en pantallas pequeñas */
+    }
+
+    .btn {
+        padding: 5px 10px; /* Reduce el padding de los botones para que ocupen menos espacio */
+        font-size: 0.8rem; /* Reduce el tamaño de la fuente de los botones */
+    }
 }

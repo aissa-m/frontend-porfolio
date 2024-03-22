@@ -2,11 +2,13 @@
 
 .layout-container {
     position: relative;
-    height: 100vh; /* Altura completa */
-    background-image: url('../../img/fondo3.jpg'); /* Añade tu imagen de fondo */
+    min-height: 100vh; /* Cambiado de height a min-height */
+    background-image: url('../../img/fondo3.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: scroll; /* Asegura que el fondo se extienda con el scroll */
 }
+
 
 .dark-mode {
     background-color: rgba(0, 0, 0, 0.5);
@@ -55,7 +57,7 @@
 
 .social-links {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 20px;
     display: flex;
     flex-direction: column;
@@ -72,4 +74,49 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+
+/* *****************nuevo******************* */
+
+.top-menu {
+    position: fixed;
+    top: 33px;
+    right: 0;
+    margin: 20px;
+    display: flex;
+    flex-direction: row; /* Cambia a 'column' si prefieres que el menú se despliegue verticalmente */
+    transition: transform 0.3s ease; /* Para animación */
+    transform: translateY(-100%); /* Esconde el menú */
+}
+
+.top-menu.open {
+    transform: translateY(0); /* Muestra el menú */
+}
+
+.menu-icon {
+    display: none; /* Oculta el icono del menú por defecto */
+}
+
+@media (max-width: 768px) { /* Ajusta este valor según tus necesidades */
+    .top-menu {
+        position: fixed;
+        top: 33px; /* Ajusta esto según el tamaño de tu logo o barra de navegación */
+        right: 9px;        
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.8); /* O el color que prefieras */
+        border-radius: 5px; /* Estilo opcional */
+        transform: translateY(-1100%); /* Se mantiene escondido */
+    }
+    .menu-icon {
+        display: block; /* Muestra el icono del menú en pantallas pequeñas */
+        position: fixed;
+        top: 35px;
+        right: 30px;
+        z-index: 1100; /* Asegúrate de que el ícono esté por encima de otros elementos */
+    }
+
+    .brand-logo, .social-links {
+        position: fixed;
+    }
 }

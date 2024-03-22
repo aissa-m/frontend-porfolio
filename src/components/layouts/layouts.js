@@ -10,6 +10,8 @@ import miLogo from '../../img/milogo.png';
 import sunIcon from '../../img/sol.png';
 import moonIcon from '../../img/luna.png';
 
+import logoMenu from '../../img/menu.png';
+
 const Layout = ({ children }) => {
     const ancho = '20px';
     const alto = '20px';
@@ -20,17 +22,25 @@ const Layout = ({ children }) => {
 
     const toggleDarkMode = () => setDarkMode(!darkMode);
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+
     return (
         <div className={`layout-container ${darkMode ? 'dark-mode' : ''}`}>
             <div className="brand-logo">
                 <a href="/"><img src={miLogo} alt="Mi Logo" width={anchoLogo} height={altoLogo}/></a>
             </div>
-            <nav className="top-menu">
+            <nav className={`top-menu ${isMenuOpen ? 'open' : ''}`}>
                 <a href="/">Inicio</a>
-                <a href="/educaciones">Estudios</a>
+                <a href="/educacion">Estudios</a>
                 <a href="/experiencia">Experiencia</a>
                 <a href="/contacto">Contacto</a>
             </nav>
+            <img src={logoMenu} alt="Menu" className="menu-icon" onClick={toggleMenu} width={ancho} height={alto}/>
             <div className="social-links">
                 {/* <a href="https://facebook.com"><img src={logoFacebook} alt="Facebook" width={ancho} height={alto}/></a> */}
                 <a href="https://twitter.com/aissa_113"><img src={logoTwitter} alt="Twitter" width={ancho} height={alto}/></a>

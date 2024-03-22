@@ -65,3 +65,31 @@
   filter: blur(10px);
   transform: scale(0.9, 0.9);
 }
+
+
+/* Adaptaciones para dispositivos más grandes, si es necesario */
+.proyectos-container .cards .card {
+  max-height: 200px; /* Establece un máximo para la altura */
+  max-width: 90%; /* Permite que las tarjetas ocupen hasta un 90% del ancho del contenedor */
+  margin: auto; /* Centra las tarjetas si son más pequeñas que el máximo establecido */
+  /* Mantén los demás estilos */
+}
+
+/* Adaptaciones para dispositivos pequeños */
+@media (max-width: 768px) {
+  .proyectos-container .cards {
+    flex-direction: column; /* Hace que las tarjetas se apilen verticalmente */
+    margin-top: 110px;
+  }
+
+  .proyectos-container .cards .card {
+    width: 90%; /* Hace que las tarjetas sean más anchas en pantallas pequeñas */
+    height: auto; /* Permite que la altura se ajuste al contenido */
+    margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+  }
+
+  .proyectos-container .cards .card p.tip,
+  .proyectos-container .cards .card p.second-text {
+    font-size: 0.9em; /* Ajusta el tamaño de la tipografía para que sea legible en pantallas pequeñas */
+  }
+}

@@ -59,3 +59,22 @@
     overflow: hidden;
     color: red; /* Personaliza esto como quieras */
 }
+
+/* Estilos que se aplicarán solo en pantallas menores a 768px de ancho */
+@media (max-width: 768px) {
+    .contact-form, .success-message, .error-message {
+        width: 90%; /* Hace el formulario más ancho para llenar más espacio */
+        max-width: none; /* Remueve el ancho máximo para permitir que el formulario se expanda */
+    }
+
+    .contact-form, .success-message, .error-message {
+        top: 50%; /* Mantiene centrado verticalmente */
+        left: 50%; /* Mantiene centrado horizontalmente */
+        transform: translate(-50%, -50%); /* Ajusta la posición para mantenerlo centrado */
+        padding: 15px; /* Reduce el padding para que ocupe menos espacio */
+    }
+
+    .success-message-text, .error-message {
+        font-size: 14px; /* Reduce el tamaño de la fuente para ajustarse a pantallas más pequeñas */
+    }
+}
