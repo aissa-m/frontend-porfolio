@@ -34,7 +34,6 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10; /* Asegúrate de que este valor sea menor que el de los elementos de contenido para que no los cubra. */
     color: wheat;
 }
 
