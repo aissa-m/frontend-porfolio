@@ -5,8 +5,6 @@ import { fetchContact } from '../../apiCalls';
 const ContactForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [telef, setTelef] = useState('');
     const [message, setMessage] = useState('');
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
@@ -41,14 +39,6 @@ const ContactForm = () => {
                         <label htmlFor="email" className="form-label">Correo electrónico</label>
                         <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     </div>
-                    {/* <div className="mb-3">
-                        <label htmlFor="telef" className="form-label">Teléfono</label>
-                        <input type="telef" className="form-control" id="telef" value={email} onChange={(e) => setTelef(e.target.value)} required />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="subject" className="form-label">Asunto</label>
-                        <input type="text" className="form-control" id="subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
-                    </div> */}
                     <div className="mb-3">
                         <label htmlFor="message" className="form-label">Mensaje</label>
                         <textarea className="form-control" id="message" rows="3" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
