@@ -112,7 +112,7 @@
         position: fixed;
         top: 35px;
         right: 30px;
-        z-index: 1100; /* Asegúrate de que el ícono esté por encima de otros elementos */
+        z-index: 10000; /* Asegúrate de que el ícono esté por encima de otros elementos */
     }
 
     .brand-logo, .social-links {

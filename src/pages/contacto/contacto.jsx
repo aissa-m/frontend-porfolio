@@ -1,36 +1,54 @@
-// ContactForm.js
-
 import React, { useState } from 'react';
-import './contacto.css'; // Asumiendo que tienes estilos específicos para este formulario
+import './contacto.css';
 import { fetchContact } from '../../apiCalls';
 
 const ContactForm = () => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [telef, setTelef] = useState('');
     const [message, setMessage] = useState('');
-    const [formSubmitted, setFormSubmitted] = useState(false); // Nuevo estado para manejar si el formulario ha sido enviado
-    const [errorMessage, setErrorMessage] = useState(''); // Nuevo estado para manejar mensajes de error
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setErrorMessage(''); // Limpiar mensajes de error anteriores
+        setErrorMessage('');
         try {
-            const response = await fetchContact(email, message);
+            const response = await fetchContact({ name, email, message });
             console.log(response);
-            setFormSubmitted(true); // Ocultar el formulario y mostrar el mensaje de éxito
+            setFormSubmitted(true);
         } catch (error) {
             console.error('Error enviando mensaje:', error.response);
-            setErrorMessage('Error enviando mensaje, inténtelo más tarde'); // Establece tu mensaje de error
+            setErrorMessage('Error enviando mensaje, inténtelo más tarde');
         }
     };
 
     return (
         <>
+            
             {!formSubmitted ? (
-                 <form onSubmit={handleSubmit} className="contact-form">
+                <form onSubmit={handleSubmit} className="contact-form">
+                    <div className="services-section">
+                        <h2>Mis Servicios</h2>
+                        <p>Desarrollo de sitios web personalizados, mantenimiento web, clases particulares de programación.</p>
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="name" className="form-label">Nombre</label>
+                        <input type="text" className="form-control" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
+                    </div>
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label">Correo electrónico</label>
                         <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     </div>
+                    {/* <div className="mb-3">
+                        <label htmlFor="telef" className="form-label">Teléfono</label>
+                        <input type="telef" className="form-control" id="telef" value={email} onChange={(e) => setTelef(e.target.value)} required />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="subject" className="form-label">Asunto</label>
+                        <input type="text" className="form-control" id="subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
+                    </div> */}
                     <div className="mb-3">
                         <label htmlFor="message" className="form-label">Mensaje</label>
                         <textarea className="form-control" id="message" rows="3" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
@@ -50,7 +68,6 @@ const ContactForm = () => {
                     {errorMessage}
                 </div>
             )}
-       
         </>
     );
 };

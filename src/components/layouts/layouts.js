@@ -7,8 +7,8 @@ import logoGit from '../../img/logo-github.svg';
 import logoLink from '../../img/logo-linkedin.svg';
 import miLogo from '../../img/milogo.png';
 
-import sunIcon from '../../img/sol.png';
-import moonIcon from '../../img/luna.png';
+// import sunIcon from '../../img/sol.png';
+// import moonIcon from '../../img/luna.png';
 
 import logoMenu from '../../img/menu.png';
 
@@ -18,9 +18,9 @@ const Layout = ({ children }) => {
     const anchoLogo = '100px';
     const altoLogo = '100px';
 
-    const [darkMode, setDarkMode] = useState(false);
+    // const [darkMode, setDarkMode] = useState(false);
 
-    const toggleDarkMode = () => setDarkMode(!darkMode);
+    // const toggleDarkMode = () => setDarkMode(!darkMode);
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -28,9 +28,8 @@ const Layout = ({ children }) => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-
     return (
-        <div className={`layout-container ${darkMode ? 'dark-mode' : ''}`}>
+        <div className={`layout-container`}>
             <div className="brand-logo">
                 <a href="/"><img src={miLogo} alt="Mi Logo" width={anchoLogo} height={altoLogo}/></a>
             </div>
@@ -49,13 +48,13 @@ const Layout = ({ children }) => {
                 <a href="https://github.com/aissa-m"><img src={logoGit} alt="GitHub" width={ancho} height={alto}/></a>
                 <a href="https://www.instagram.com/aissa__1313/"><img src={logoInsta} alt="Instagram" width={ancho} height={alto}/></a>
             </div>
-            <div className="mode-toggle">
+            {/* <div className="mode-toggle">
                 <img
                     src={darkMode ? sunIcon : moonIcon}
                     alt="Toggle Dark Mode"
                     onClick={toggleDarkMode}
                 />
-            </div>
+            </div> */}
             {children}
         </div>
     );

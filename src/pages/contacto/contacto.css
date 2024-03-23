@@ -7,9 +7,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo transparente */
     padding: 20px;
     border-radius: 10px;
+
+
 }
 
 .success-message {
@@ -60,10 +61,13 @@
     color: red; /* Personaliza esto como quieras */
 }
 
+
+
+
 /* Estilos que se aplicarán solo en pantallas menores a 768px de ancho */
 @media (max-width: 768px) {
     .contact-form, .success-message, .error-message {
-        width: 80%; /* Hace el formulario más ancho para llenar más espacio */
+        width: 78%; /* Hace el formulario más ancho para llenar más espacio */
         max-width: none; /* Remueve el ancho máximo para permitir que el formulario se expanda */
     }
 
@@ -74,6 +78,9 @@
         padding: 15px; /* Reduce el padding para que ocupe menos espacio */
     }
 
+    /* .contact-form{
+        margin-top: 110px;
+    } */
     .success-message-text, .error-message {
         font-size: 14px; /* Reduce el tamaño de la fuente para ajustarse a pantallas más pequeñas */
     }

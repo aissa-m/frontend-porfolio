@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Define la base URL de tu API
-// const BASE_URL = 'http://localhost:8000/api';
+const BASE_URL = 'http://localhost:8000/api';
 const BASE_URL_DO = 'https://my-portfolio-mirnv.ondigitalocean.app/api';
 
 // Autenticación
@@ -47,8 +47,9 @@ export const fetchEducaciones = async () => {
     return await axios.get(`${BASE_URL_DO}/educaciones`);
 };
 
-export const fetchContact = async (email, message) => {
-    return await axios.post(`${BASE_URL_DO}/contact`, {
+export const fetchContact = async ({ name, email, message}) => {
+    return await axios.post(`${BASE_URL}/contact`, {
+        name,
         email,
         message
     }, {
@@ -58,6 +59,7 @@ export const fetchContact = async (email, message) => {
         }
     });
 };
+
 
 export const fetchExperiencias = async () => {
     return await axios.get(`${BASE_URL_DO}/experiencias`);
