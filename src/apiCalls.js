@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Define la base URL de tu API
-const BASE_URL = 'http://localhost:8000/api';
+// const BASE_URL = 'http://localhost:8000/api';
 const BASE_URL_DO = 'https://my-portfolio-mirnv.ondigitalocean.app/api';
 
 // Autenticación
