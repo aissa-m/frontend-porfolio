@@ -14,7 +14,6 @@ const ContactForm = () => {
         setErrorMessage('');
         try {
             const response = await fetchContact({ name, email, message });
-            console.log(response);
             setFormSubmitted(true);
         } catch (error) {
             console.error('Error enviando mensaje:', error.response);

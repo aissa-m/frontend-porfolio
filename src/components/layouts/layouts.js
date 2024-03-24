@@ -5,7 +5,8 @@ import logoTwitter from '../../img/logo-twitter.svg';
 import logoInsta from '../../img/logo-instagram.svg';
 import logoGit from '../../img/logo-github.svg';
 import logoLink from '../../img/logo-linkedin.svg';
-import miLogo from '../../img/milogo.png';
+// import miLogo from '../../img/milogo.png';
+import miLogo2 from '../../img/aissa2.png';
 
 // import sunIcon from '../../img/sol.png';
 // import moonIcon from '../../img/luna.png';
@@ -31,7 +32,7 @@ const Layout = ({ children }) => {
     return (
         <div className={`layout-container`}>
             <div className="brand-logo">
-                <a href="/"><img src={miLogo} alt="Mi Logo" width={anchoLogo} height={altoLogo}/></a>
+                <a href="/"><img src={miLogo2} alt="Mi Logo" width={anchoLogo} height={altoLogo}/></a>
             </div>
             <nav className={`top-menu ${isMenuOpen ? 'open' : ''}`}>
                 <a href="/">Inicio</a>
