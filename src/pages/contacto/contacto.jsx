@@ -13,7 +13,7 @@ const ContactForm = () => {
         e.preventDefault();
         setErrorMessage('');
         try {
-            const response = await fetchContact({ name, email, message });
+            await fetchContact({ name, email, message });
             setFormSubmitted(true);
         } catch (error) {
             console.error('Error enviando mensaje:', error.response);
