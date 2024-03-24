@@ -48,7 +48,7 @@ export const fetchEducaciones = async () => {
 };
 
 export const fetchContact = async ({ name, email, message}) => {
-    return await axios.post(`${BASE_URL}/contact`, {
+    return await axios.post(`${BASE_URL_DO}/contact`, {
         name,
         email,
         message
