@@ -21,7 +21,7 @@ const EducacionComponent = () => {
                     <h4>{educacion.grado}</h4>
                     <div className="cover">
                         <div className="details">
-                            <p>Institución: {educacion.institucion}</p>
+                            <p>Centro: {educacion.institucion}</p>
                             <p>Campo de estudio: {educacion.campo_de_estudio}</p>
                             <p>{educacion.fecha_inicio}    {educacion.fecha_fin}</p>
                             <br />
