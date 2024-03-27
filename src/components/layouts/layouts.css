@@ -73,6 +73,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 
@@ -87,6 +88,7 @@
     flex-direction: row; /* Cambia a 'column' si prefieres que el menú se despliegue verticalmente */
     transition: transform 0.3s ease; /* Para animación */
     transform: translateY(-100%); /* Esconde el menú */
+    z-index: 1000;
 }
 
 .top-menu.open {

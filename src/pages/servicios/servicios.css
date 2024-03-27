@@ -1,0 +1,31 @@
+/* src/assets/css/servicesPage.css */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* servicios.css */
+.btn-contacto {
+    margin-top: 20px; /* Añade un margen superior para evitar superposiciones */
+}
+
+.text-center{
+    margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+    .card {
+        margin-left: auto; /* Centra las tarjetas horizontalmente */
+        margin-right: auto; /* Centra las tarjetas horizontalmente */
+    }
+    
+    .btn-contacto {
+        margin-top: 70px; /* Aumenta el margen en dispositivos más pequeños para evitar superposiciones */
+        margin-bottom: 30px;
+    }
+
+    .text-center{
+        margin-top: 110px;
+        /* margin-bottom: 20px; */
+    }
+}
