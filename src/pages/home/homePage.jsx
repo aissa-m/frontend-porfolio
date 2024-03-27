@@ -6,7 +6,7 @@ const Homepage = () => {
     return (
         <div className="homepage">
             <div className="content-section">
-                <h1>Hola, soy <span>Aissa M</span></h1>
+                <h1>Full-Stack<span>Developer</span></h1>
                 <p className="subtitle">Desarrollador Web y Tutor en Línea</p>
                 <p>Desarrollo soluciones web personalizadas, contacte <a href="/contacto">aquí</a> y ofrezco clases particulares online. 
                 Expertise en Laravel, React, Typeorm, Node Js y más. 
